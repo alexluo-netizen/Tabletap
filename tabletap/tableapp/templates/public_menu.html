@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}{{ restaurant.name }} Menu{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+  <h2 class="mb-4">{{ restaurant.name }} Menu</h2>
+
+  {% for menu in menus %}
+    <h4>{{ menu.title }}</h4>
+    <p>{{ menu.description }}</p>
+    <ul>
+      {% for item in menu.menuitem_set.all %}
+        <li>{{ item.name }} - ${{ item.price }} ({{ item.category }})</li>
+      {% empty %}
+        <li>No items yet.</li>
+      {% endfor %}
+    </ul>
+  {% endfor %}
+</div>
+{% endblock %}

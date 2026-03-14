@@ -1,0 +1,13 @@
+        modified:   README.md
+        new file:   note.txt
+        new file:   tabletap/tableapp/admin.py
+        new file:   tabletap/tableapp/forms.py
+        new file:   tabletap/tableapp/models.py
+        new file:   tabletap/tableapp/templates/account/signup.html
+        new file:   tabletap/tableapp/templates/base.html
+        new file:   tabletap/tableapp/templates/public_menu.html
+        new file:   tabletap/tableapp/templates/static/image.png
+        new file:   tabletap/tableapp/templates/static/style.css
+        new file:   tabletap/tableapp/urls.py
+        new file:   tabletap/tableapp/views.py
+        new file:   tabletap/tabletap/urls.py

@@ -1,0 +1,64 @@
+:root {
+    --primary-blue: #0056b3;
+    --accent-yellow: #ffc107;
+    --background-white: #ffffff;
+  }
+  body {
+    background-color: var(--background-white);
+    color: #333;
+  }
+  .navbar, .sidebar {
+    background-color: var(--primary-blue);
+  }
+  .navbar-brand {
+    color: var(--accent-yellow);
+    font-weight: bold;
+  }
+  .sidebar {
+    height: 100vh;
+    position: fixed;
+    top: 56px; /* match navbar height */
+    left: 0;
+    width: 200px;
+    padding: 1rem;
+    background-color: var(--primary-blue);
+    color: white;
+  }
+  .sidebar a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+  }
+  .sidebar a:hover {
+    background-color: var(--accent-yellow);
+    color: black;
+  }
+  .main-content {
+    margin-left: 220px; /* allow room for sidebar */
+    padding-top: 70px;  /* allow room for fixed navbar */
+  }
+  .resized-image {
+    width: 300px;
+    height: 200px;
+  }
+  .container {
+    padding-top: 80px;
+  }
+  .btn-outline-primary {
+    border-color: var(--primary-blue);
+    color: var(--primary-blue);
+  }
+  .btn-outline-primary:hover {
+    background-color: var(--primary-blue);
+    color: white;
+  }
+  .navbar a, .navbar .navbar-brand {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .navbar a:hover {
+    color: var(--accent-yellow);
+  }
+  

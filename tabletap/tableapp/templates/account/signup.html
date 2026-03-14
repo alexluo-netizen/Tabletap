@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% load socialaccount %}
+
+{% block title %}Sign Up{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-5">
+            <div class="card shadow-lg p-4">
+                <h2 class="text-center mb-4">{% trans "Sign Up" %}</h2>
+
+                {% if not SOCIALACCOUNT_ONLY %}
+                    <form method="post" action="{% url 'account_signup' %}">
+                        {% csrf_token %}
+                        {% for field in form %}
+                            <div class="mb-3">
+                                {{ field.label_tag }} {{ field }}
+                                {% if field.help_text %}
+                                    <small class="form-text text-muted">{{ field.help_text }}</small>
+                                {% endif %}
+                                {% for error in field.errors %}
+                                    <div class="text-danger">{{ error }}</div>
+                                {% endfor %}
+                            </div>
+                        {% endfor %}
+                        {{ redirect_field }}
+
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary">{% trans "Sign Up" %}</button>
+                        </div>
+                    </form>
+                {% endif %}
+
+                <div class="text-center mt-3">
+                    <p>{% trans "Already have an account?" %} <a href="{% url 'account_login' %}">{% trans "Sign in" %}</a></p>
+                </div>
+
+                {% if SOCIALACCOUNT_ENABLED %}
+                    <div class="mt-4">
+                        <hr>
+                        {% include "socialaccount/snippets/login.html" with page_layout="entrance" %}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
