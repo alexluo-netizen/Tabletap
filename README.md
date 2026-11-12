@@ -16,9 +16,9 @@ progression:
 
 
 Features included:
-Multi-role Access Control (RBAC) 多角色权限控制
-Dynamic Menu Rendering 动态菜单渲染
-Order Archiving Mechanism 订单归档机制
-Backend & Frontend Integration 前后端联调（Django Template）
+### Multi-role Access Control (RBAC) 多角色权限控制
+### Dynamic Menu Rendering 动态菜单渲染
+### Order Archiving Mechanism 订单归档机制
+### Backend & Frontend Integration 前后端联调（Django Template）
 
 
